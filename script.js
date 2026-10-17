@@ -16,6 +16,8 @@ function start(){
 
 }
 
+function mulaiSurat() {
+
     // Konfeti
     for (let i = 0; i < 120; i++) {
 
@@ -23,11 +25,8 @@ function start(){
         d.className = "conf";
 
         d.style.left = Math.random() * 100 + "vw";
-        d.style.background =
-            `hsl(${Math.random() * 360},90%,70%)`;
-
-        d.style.animationDuration =
-            (2 + Math.random() * 3) + "s";
+        d.style.background = `hsl(${Math.random()*360},90%,70%)`;
+        d.style.animationDuration = (2 + Math.random()*3) + "s";
 
         document.body.appendChild(d);
 
@@ -44,29 +43,20 @@ function start(){
 
     function ketik() {
 
-    if (i < text.length) {
+        if (i < text.length) {
 
-        p.textContent += text.charAt(i);
+            p.textContent += text.charAt(i);
 
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth"
-        });
+            i++;
 
-        i++;
+            setTimeout(ketik, 25);
 
-        setTimeout(ketik, 25);
-    }
+        }
 
     }
 
+    document.getElementById("letter").style.display = "block";
+    
     ketik();
-
-    const surat = document.getElementById("letter");
-
-window.scrollTo({
-    top: surat.offsetTop,
-    behavior: "smooth"
-});
 
 }
