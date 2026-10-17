@@ -48,8 +48,11 @@ function start() {
 
     ketik();
 
-    document.getElementById("letter").scrollIntoView({
-        behavior: "smooth"
-    });
+    const surat = document.getElementById("letter");
+
+window.scrollTo({
+    top: surat.offsetTop,
+    behavior: "smooth"
+});
 
 }
