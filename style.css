@@ -103,6 +103,10 @@ button:hover{
   animation:fade 1.2s;
 }
 
+body.open #letter{
+    display:block;
+}
+
 #letter h2{
   text-align:center;
   color:#9b5de5;
