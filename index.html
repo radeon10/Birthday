@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Happy Birthday Sayang</title>
-  <link rel="stylesheet" href="style.css">
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sayang 💜</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
-<body><div class="bg"></div><div class="wrap"><div class="card">
+
+<body>
+
+<div class="bg"></div>
+
+<div class="wrap">
+
+<div class="card">
+
 <h1>Happy Birthday, Sayang 💜</h1>
-<img class="hero" src="400130.png">
+
+<img class="hero" src="400130.png" alt="Capybara">
+
 <p>18 Oktober 2026</p>
-<button onclick="start()">Buka Hadiah 🎁</button>
+
+<button onclick="start()">
+🎁 Buka Hadiah
+</button>
+
 <div id="letter">
+
 <h2>Hai sayangku 🥰</h2>
-<p>Happy Birthday...
+
+<p>
+
+Happy Birthday...
 
 Hari ini adalah hari yg spesial, bukan hanya usiamu yg bertambah, tp aku bersyukur karna masih diberi kesempatan buat ngerayain ulang tahun sama kamu 🥰
 
@@ -24,12 +49,55 @@ Aku mungkin ga bisa ngasih hadiah yg mahal atau mewah, tp aku berharap hadiah ke
 
 Karna ngeliat kamu bahagia, itu juga bikin aku bahagia ☺
 
-Happy Birthday, Sayang 🤍</p>
-</div></div></div>
+Happy Birthday, Sayang 🤍
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 <script>
+
 function start(){
-for(let i=0;i<120;i++){let d=document.createElement('div');d.className='conf';d.style.left=Math.random()*100+'vw';d.style.background=['#c9a0ff','#ffb6d9','#fff176','#b2f2bb'][i%4];d.style.animationDelay=Math.random()+'s';document.body.appendChild(d);}
-document.getElementById('letter').style.display='block';
-window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+
+for(let i=0;i<120;i++){
+
+let c=document.createElement("div");
+
+c.className="conf";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.background=[
+"#ff7eb6",
+"#c084fc",
+"#ffd166",
+"#7dd3fc",
+"#ffffff"
+][Math.floor(Math.random()*5)];
+
+c.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>c.remove(),5000);
+
 }
-</script></body></html>
+
+document.getElementById("letter").style.display="block";
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
