@@ -10,7 +10,7 @@ function start() {
 
         d.style.left = Math.random() * 100 + "vw";
         d.style.background =
-            `hsl(${Math.random()*360},90%,70%)`;
+            `hsl(${Math.random() * 360},90%,70%)`;
 
         d.style.animationDuration =
             (2 + Math.random() * 3) + "s";
@@ -20,10 +20,32 @@ function start() {
         setTimeout(() => d.remove(), 5000);
     }
 
-    // Scroll ke surat
-    document.getElementById("letter")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    // Efek mengetik
+    const p = document.getElementById("typing");
+    const text = p.innerHTML;
+
+    p.innerHTML = "";
+
+    let i = 0;
+
+    function ketik() {
+
+        if (i < text.length) {
+
+            p.innerHTML += text.charAt(i);
+
+            i++;
+
+            setTimeout(ketik, 25);
+
+        }
+
+    }
+
+    ketik();
+
+    document.getElementById("letter").scrollIntoView({
+        behavior: "smooth"
+    });
 
 }
