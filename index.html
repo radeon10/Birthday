@@ -59,48 +59,9 @@ Happy Birthday, Sayang 🤍
 
 </div>
 
-<script>
-
-function start(){
-
-const btn=document.querySelector("button");
-btn.disabled=true;
-btn.innerHTML="💜 Membuka...";
-
-for(let i=0;i<180;i++){
-
-let d=document.createElement("div");
-d.className="conf";
-
-d.style.left=Math.random()*100+"vw";
-d.style.background=
-["#ff8fd8","#b67cff","#ffffff","#ffd166","#ff6b6b"]
-[Math.floor(Math.random()*5)];
-
-d.style.animationDuration=(Math.random()*2+2)+"s";
-
-document.body.appendChild(d);
-
-setTimeout(()=>d.remove(),5000);
-
-}
-
-setTimeout(()=>{
-
-document.getElementById("letter").style.display="block";
-
-window.scrollTo({
-top:document.body.scrollHeight,
-behavior:"smooth"
-});
-
-btn.style.display="none";
-
-},1200);
-
-}
-
-</script>
+<script src="script.js"></script>
+</body>
+</html>
 
 </body>
 
