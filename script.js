@@ -10,12 +10,14 @@ function start(){
 
         const bgm = document.getElementById("bgm");
 
-bgm.volume = 0.3;
-bgm.play();
+if (bgm) {
+    bgm.volume = 0.3;
+    bgm.play().catch(() => {});
+}
 
-        card.style.display="none";
+card.style.display = "none";
 
-        mulaiSurat();
+mulaiSurat();
 
     },600);
 
