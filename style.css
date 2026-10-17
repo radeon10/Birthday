@@ -158,3 +158,26 @@ padding:22px;
 }
 
 }
+/* Animasi buka hadiah */
+.open .hero{
+    animation: zoomPhoto .8s ease;
+}
+
+@keyframes zoomPhoto{
+    0%{
+        transform: scale(.8);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.open button{
+    display: none;
+}
+
+.open #letter{
+    display: block;
+}
