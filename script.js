@@ -1,6 +1,20 @@
-function start() {
+function start(){
 
-    document.body.classList.add("open");
+    const card=document.querySelector(".card");
+
+    card.classList.add("hide");
+
+    setTimeout(()=>{
+
+        document.body.classList.add("open");
+
+        card.style.display="none";
+
+        mulaiSurat();
+
+    },600);
+
+}
 
     // Konfeti
     for (let i = 0; i < 120; i++) {
