@@ -63,29 +63,29 @@ Happy Birthday, Sayang 🤍
 
 function start(){
 
-for(let i=0;i<120;i++){
+const btn=document.querySelector("button");
+btn.disabled=true;
+btn.innerHTML="💜 Membuka...";
 
-let c=document.createElement("div");
+for(let i=0;i<180;i++){
 
-c.className="conf";
+let d=document.createElement("div");
+d.className="conf";
 
-c.style.left=Math.random()*100+"vw";
+d.style.left=Math.random()*100+"vw";
+d.style.background=
+["#ff8fd8","#b67cff","#ffffff","#ffd166","#ff6b6b"]
+[Math.floor(Math.random()*5)];
 
-c.style.background=[
-"#ff7eb6",
-"#c084fc",
-"#ffd166",
-"#7dd3fc",
-"#ffffff"
-][Math.floor(Math.random()*5)];
+d.style.animationDuration=(Math.random()*2+2)+"s";
 
-c.style.animationDuration=(Math.random()*3+2)+"s";
+document.body.appendChild(d);
 
-document.body.appendChild(c);
-
-setTimeout(()=>c.remove(),5000);
+setTimeout(()=>d.remove(),5000);
 
 }
+
+setTimeout(()=>{
 
 document.getElementById("letter").style.display="block";
 
@@ -93,6 +93,10 @@ window.scrollTo({
 top:document.body.scrollHeight,
 behavior:"smooth"
 });
+
+btn.style.display="none";
+
+},1200);
 
 }
 
