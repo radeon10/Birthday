@@ -22,9 +22,9 @@ function start() {
 
     // Efek mengetik
     const p = document.getElementById("typing");
-    const text = p.innerHTML;
+    const text = p.textContent;
 
-    p.innerHTML = "";
+    p.textContent = "";
 
     let i = 0;
 
@@ -32,7 +32,7 @@ function start() {
 
         if (i < text.length) {
 
-            p.innerHTML += text.charAt(i);
+            p.textContent += text.charAt(i);
 
             i++;
 
