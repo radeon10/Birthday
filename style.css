@@ -1,107 +1,160 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#f8f2ff,#f3e5ff,#ead7ff);
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(135deg,#fff7fd,#f6efff,#efe5ff);
+  color:#555;
+  overflow-x:hidden;
 }
 
-/* Background Glow */
-body::before{
-    content:"";
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:#d7b8ff;
-    border-radius:50%;
-    filter:blur(150px);
-    top:-150px;
-    left:-150px;
-    opacity:.45;
+/* Background Capybara */
+.bg{
+  position:fixed;
+  inset:0;
+  background-image:url("400130.png");
+  background-size:170px;
+  background-repeat:repeat;
+  opacity:.08;
+  z-index:-2;
+  animation:bgMove 60s linear infinite;
 }
 
-body::after{
-    content:"";
-    position:fixed;
-    width:450px;
-    height:450px;
-    background:#ffd9ef;
-    border-radius:50%;
-    filter:blur(150px);
-    bottom:-120px;
-    right:-120px;
-    opacity:.45;
+@keyframes bgMove{
+  from{
+    background-position:0 0;
+  }
+  to{
+    background-position:400px 400px;
+  }
 }
 
-/* Card */
-.container{
-    width:90%;
-    max-width:430px;
-    background:rgba(255,255,255,.55);
-    backdrop-filter:blur(18px);
-    border-radius:28px;
-    padding:35px 25px;
-    text-align:center;
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
-    border:1px solid rgba(255,255,255,.4);
-    z-index:10;
+/* Container */
+
+.wrap{
+  width:100%;
+  max-width:760px;
+  margin:auto;
+  padding:40px 18px;
 }
 
-.container img{
-    width:220px;
-    margin-bottom:20px;
-    animation:float 3s ease-in-out infinite;
+.card{
+  background:rgba(255,255,255,.78);
+  backdrop-filter:blur(14px);
+  border-radius:28px;
+  padding:26px;
+  text-align:center;
+  box-shadow:0 15px 45px rgba(170,120,255,.18);
 }
+
+/* Title */
 
 h1{
-    color:#7d4bc6;
-    font-size:34px;
-    margin-bottom:8px;
+  color:#9b5de5;
+  font-size:34px;
+  margin-bottom:15px;
 }
 
-h2{
-    color:#555;
-    font-size:18px;
-    font-weight:400;
-    margin-bottom:28px;
+.hero{
+  width:100%;
+  border-radius:24px;
+  margin:15px 0;
+  box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+p{
+  line-height:1.9;
+  font-size:17px;
 }
 
 button{
-    background:linear-gradient(135deg,#bb8cff,#9c6cff);
-    color:white;
-    border:none;
-    padding:15px 42px;
-    border-radius:50px;
-    font-size:18px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
-    box-shadow:0 10px 25px rgba(156,108,255,.35);
+  margin-top:25px;
+  padding:16px 34px;
+  border:none;
+  border-radius:50px;
+  background:#b67cff;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 8px 20px rgba(182,124,255,.45);
 }
 
 button:hover{
-    transform:translateY(-3px);
+  transform:translateY(-4px) scale(1.05);
+  background:#9b5de5;
 }
 
-@keyframes float{
-    0%{
-        transform:translateY(0px);
-    }
-    50%{
-        transform:translateY(-10px);
-    }
-    100%{
-        transform:translateY(0px);
-    }
+/* Surat */
+
+#letter{
+  display:none;
+  margin-top:35px;
+  text-align:left;
+  white-space:pre-line;
+  animation:fade 1.2s;
+}
+
+#letter h2{
+  text-align:center;
+  color:#9b5de5;
+  margin-bottom:20px;
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Confetti */
+
+.conf{
+  position:fixed;
+  width:10px;
+  height:14px;
+  top:-20px;
+  border-radius:3px;
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(120vh) rotate(720deg);
+  }
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+h1{
+font-size:28px;
+}
+
+p{
+font-size:16px;
+}
+
+button{
+width:100%;
+}
+
+.card{
+padding:22px;
+}
+
 }
