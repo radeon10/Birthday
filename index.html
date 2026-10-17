@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Sayang</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f8f0ff;color:#5b3b6a;overflow-x:hidden}
+.bg{position:fixed;inset:0;opacity:.08;background-image:url("400130.png");background-size:180px}
+.wrap{position:relative;max-width:700px;margin:auto;padding:30px;text-align:center}
+.card{background:#ffffffdd;border-radius:24px;padding:24px;backdrop-filter:blur(8px);box-shadow:0 10px 30px #0002}
+img.hero{width:100%;border-radius:20px}
+button{background:#b78cff;color:#fff;border:0;padding:14px 28px;border-radius:30px;font-size:18px;cursor:pointer}
+#letter{display:none;text-align:left;white-space:pre-line;line-height:1.8}
+.conf{position:fixed;top:-10px;width:8px;height:12px;animation:fall 3s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+</style></head>
+<body><div class="bg"></div><div class="wrap"><div class="card">
+<h1>Happy Birthday, Sayang 💜</h1>
+<img class="hero" src="400130.png">
+<p>18 Oktober 2026</p>
+<button onclick="start()">Buka Hadiah 🎁</button>
+<div id="letter">
+<h2>Hai sayangku 🥰</h2>
+<p>Happy Birthday...
+
+Hari ini adalah hari yg spesial, bukan hanya usiamu yg bertambah, tp aku bersyukur karna masih diberi kesempatan buat ngerayain ulang tahun sama kamu 🥰
+
+Sehat selalu ya sayang, panjang umur, selalu bahagia lahir & batin, langkah² kamu selalu dimudahkan & dilancarkan, apapun doa kamu segera terkabulkan 😇
+
+Terima kasih ya sayang udah hadir di hidupku, udah jadi tempat bercerita, berkeluh kesah, happy² bareng, dan juga belajar jadi seseorang yg lebih baik ☺
+
+Ga terasa kita udah bareng² selama 1 tahun 2 bulan, semoga hubungan kita ke depannya selalu bahagia, saling nguatin satu sama lain, dan semoga Allah selalu ngejaga kita berdua 😇
+
+Aku mungkin ga bisa ngasih hadiah yg mahal atau mewah, tp aku berharap hadiah kecil ini bisa bikin kamu tersenyum 🤗
+
+Karna ngeliat kamu bahagia, itu juga bikin aku bahagia ☺
+
+Happy Birthday, Sayang 🤍</p>
+</div></div></div>
+<script>
+function start(){
+for(let i=0;i<120;i++){let d=document.createElement('div');d.className='conf';d.style.left=Math.random()*100+'vw';d.style.background=['#c9a0ff','#ffb6d9','#fff176','#b2f2bb'][i%4];d.style.animationDelay=Math.random()+'s';document.body.appendChild(d);}
+document.getElementById('letter').style.display='block';
+window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+}
+</script></body></html>
