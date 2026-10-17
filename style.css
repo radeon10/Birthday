@@ -181,3 +181,17 @@ padding:22px;
 .open #letter{
     display: block;
 }
+
+/* Efek mengetik */
+#typing{
+    overflow: hidden;
+    white-space: pre-line;
+    border-right: 3px solid #b67cff;
+    animation: blink .8s infinite;
+}
+
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
