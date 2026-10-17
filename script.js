@@ -8,6 +8,11 @@ function start(){
 
         document.body.classList.add("open");
 
+        const bgm = document.getElementById("bgm");
+
+bgm.volume = 0.3;
+bgm.play();
+
         card.style.display="none";
 
         mulaiSurat();
