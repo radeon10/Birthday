@@ -30,15 +30,19 @@ function start() {
 
     function ketik() {
 
-        if (i < text.length) {
+    if (i < text.length) {
 
-            p.textContent += text.charAt(i);
+        p.textContent += text.charAt(i);
 
-            i++;
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
 
-            setTimeout(ketik, 25);
+        i++;
 
-        }
+        setTimeout(ketik, 25);
+    }
 
     }
 
