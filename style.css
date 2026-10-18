@@ -237,3 +237,11 @@ padding:22px;
         transform:translateY(0);
     }
 }
+.made{
+    margin-top:12px;
+    margin-bottom:22px;
+    font-size:14px;
+    color:#999;
+    opacity:.8;
+    font-style:italic;
+}
