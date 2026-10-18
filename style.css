@@ -1,3 +1,4 @@
+
 *{
   margin:0;
   padding:0;
@@ -273,6 +274,22 @@ padding:22px;
     text-align:center;
     opacity:.85;
     font-style:italic;
+
+    animation: tapHint 1.8s ease-in-out infinite;
+}
+
+@keyframes tapHint{
+
+    0%,100%{
+        opacity:.45;
+        transform:translateY(0);
+    }
+
+    50%{
+        opacity:1;
+        transform:translateY(-2px);
+    }
+
 }
 
 #capyButton img{
