@@ -67,20 +67,22 @@ p.textContent = "";
 
     function ketik() {
 
-        if (i < text.length) {
+    if (i < text.length) {
 
-            p.textContent += text.charAt(i);
+        p.textContent += text.charAt(i);
 
-            i++;
+        i++;
 
-            setTimeout(ketik, 25);
+        setTimeout(ketik, 25);
 
-        }
+    } else {
+
+        setTimeout(() => {
+
+            document.getElementById("ending").style.display = "block";
+
+        }, 1000);
 
     }
 
-    document.getElementById("letter").style.display = "block";
-    
-    ketik();
-
-}
+    }
