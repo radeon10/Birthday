@@ -42,9 +42,26 @@ function mulaiSurat() {
 
     // Efek mengetik
     const p = document.getElementById("typing");
-    const text = p.textContent;
 
-    p.textContent = "";
+const text = `
+Happy Birthday...
+
+Hari ini adalah hari yg spesial, bukan hanya usiamu yg bertambah, tp aku bersyukur karna masih diberi kesempatan buat ngerayain ulang tahun sama kamu 🥰
+
+Sehat selalu ya sayang, panjang umur, selalu bahagia lahir & batin, langkah² kamu selalu dimudahkan & dilancarkan, apapun doa kamu segera terkabulkan 😇
+
+Terima kasih ya sayang udah hadir di hidupku, udah jadi tempat bercerita, berkeluh kesah, happy² bareng, dan juga belajar jadi seseorang yg lebih baik ☺
+
+Ga terasa kita udah bareng² selama 1 tahun 2 bulan, semoga hubungan kita ke depannya selalu bahagia, saling nguatin satu sama lain, dan semoga Allah selalu ngejaga kita berdua 😇
+
+Aku mungkin ga bisa ngasih hadiah yg mahal atau mewah, tp aku berharap hadiah kecil ini bisa bikin kamu tersenyum 🤗
+
+Karna ngeliat kamu bahagia, itu juga bikin aku bahagia ☺
+
+Happy Birthday, Sayang 🤍
+`;
+
+p.textContent = "";
 
     let i = 0;
 
