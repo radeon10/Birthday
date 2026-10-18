@@ -40,10 +40,9 @@ function mulaiSurat() {
         setTimeout(() => d.remove(), 5000);
     }
 
-    // Efek mengetik
     const p = document.getElementById("typing");
 
-const text = `
+    const text = `
 Happy Birthday...
 
 Hari ini adalah hari yg spesial, bukan hanya usiamu yg bertambah, tp aku bersyukur karna masih diberi kesempatan buat ngerayain ulang tahun sama kamu 🥰
@@ -61,28 +60,32 @@ Karna ngeliat kamu bahagia, itu juga bikin aku bahagia ☺
 Happy Birthday, Sayang 🤍
 `;
 
-p.textContent = "";
-
+    p.textContent = "";
     let i = 0;
 
     function ketik() {
 
-    if (i < text.length) {
+        if (i < text.length) {
 
-        p.textContent += text.charAt(i);
+            p.textContent += text.charAt(i);
+            i++;
 
-        i++;
+            setTimeout(ketik, 25);
 
-        setTimeout(ketik, 25);
+        } else {
 
-    } else {
+            setTimeout(() => {
 
-        setTimeout(() => {
+                document.getElementById("ending").style.display = "block";
 
-            document.getElementById("ending").style.display = "block";
+            }, 1000);
 
-        }, 1000);
+        }
 
     }
 
-    }
+    document.getElementById("letter").style.display = "block";
+
+    ketik();
+
+}
