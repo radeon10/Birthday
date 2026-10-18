@@ -74,7 +74,7 @@ p{
   font-size:17px;
 }
 
-button{
+button:not(#capyButton){
   margin-top:25px;
   padding:16px 34px;
   border:none;
@@ -88,9 +88,9 @@ button{
   box-shadow:0 8px 20px rgba(182,124,255,.45);
 }
 
-button:hover{
-  transform:translateY(-4px) scale(1.05);
-  background:#9b5de5;
+button:not(#capyButton):hover{
+    transform:translateY(-4px) scale(1.05);
+    background:#9b5de5;
 }
 
 /* Surat */
