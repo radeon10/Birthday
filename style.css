@@ -225,6 +225,8 @@ padding:22px;
     margin:20px auto;
     line-height:1.7;
     box-shadow:0 8px 20px rgba(0,0,0,.12);
+  animation:bubbleIn .6s ease;
+  
 }
 
 @keyframes slideUp{
@@ -298,6 +300,7 @@ padding:22px;
     width:180px;
     margin:0 auto 20px;
     display:block;
+  animation:capyAppear .5s ease;
 
 }
 
@@ -336,4 +339,67 @@ padding:22px;
 
 .wiggle{
     animation: wiggle .35s ease;
+}
+/* ==========================
+   Floating Hearts
+========================== */
+
+#heartContainer{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:9999;
+}
+
+.heart{
+    position:absolute;
+    font-size:26px;
+    animation:floatHeart 1.2s ease forwards;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        opacity:0;
+        transform:translateY(0) scale(.5);
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(-140px) scale(1.4);
+    }
+
+}
+
+@keyframes bubbleIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.92);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+@keyframes capyAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.85);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
 }
