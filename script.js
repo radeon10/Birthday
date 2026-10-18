@@ -106,25 +106,33 @@ function showGift(){
     // Ambil tombol kepala capybara
     const capy = document.getElementById("capyButton");
 
-    // Tambahkan animasi wiggle
+    // Efek goyang
     capy.classList.add("wiggle");
 
     // Tunggu animasi selesai
     setTimeout(() => {
 
-        // Hilangkan bagian I Love You + kepala
-        document.getElementById("ending").style.display = "none";
+        // Fade keluar
+        document.getElementById("ending").classList.add("fadeOut");
+        document.getElementById("letter").classList.add("fadeOut");
 
-        // Hilangkan surat
-        document.getElementById("letter").style.display = "none";
+        // Setelah fade selesai...
+        setTimeout(() => {
 
-        // Munculkan pesan hadiah
-        document.getElementById("giftMessage").style.display = "block";
+            // Sembunyikan
+            document.getElementById("ending").style.display = "none";
+            document.getElementById("letter").style.display = "none";
 
-        // Scroll ke pesan hadiah
-        document.getElementById("giftMessage").scrollIntoView({
-            behavior: "smooth"
-        });
+            // Tampilkan hadiah
+            const gift = document.getElementById("giftMessage");
+            gift.style.display = "block";
+
+            // Scroll
+            gift.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }, 500);
 
     }, 350);
 
