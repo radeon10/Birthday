@@ -266,6 +266,15 @@ padding:22px;
     margin:0 auto;
 }
 
+.tap-text{
+    margin-top:10px;
+    font-size:15px;
+    color:#777;
+    text-align:center;
+    opacity:.85;
+    font-style:italic;
+}
+
 #capyButton img{
     width:95px;
     display:block;
