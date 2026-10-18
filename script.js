@@ -129,3 +129,31 @@ function showGift(){
     }, 350);
 
 }
+
+function createHearts(){
+
+    const container = document.getElementById("heartContainer");
+
+    for(let i = 0; i < 6; i++){
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML = "🤍";
+
+        heart.style.left = (48 + Math.random()*8) + "%";
+
+        heart.style.top = (window.innerHeight * 0.55) + "px";
+
+        heart.style.animationDelay = (i * 0.08) + "s";
+
+        container.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },1200);
+
+    }
+
+}
