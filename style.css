@@ -252,11 +252,16 @@ padding:22px;
     justify-content:center;
     align-items:center;
     width:100%;
-    margin:25px auto;
     background:transparent;
     border:none;
     padding:0;
-    cursor:pointer;
+    margin:25px 0;
+}
+
+.capy-btn{
+    width:140px;
+    display:block;
+    margin:0 auto;
 }
 
 #capyButton img{
