@@ -248,7 +248,10 @@ padding:22px;
 /* Tombol capybara */
 
 #capyButton{
-    display:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
     margin:25px auto;
     background:transparent;
     border:none;
@@ -259,6 +262,7 @@ padding:22px;
 #capyButton img{
     width:95px;
     display:block;
+    margin:0 auto;
 }
 
 .capy-btn:hover{
