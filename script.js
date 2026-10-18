@@ -95,7 +95,7 @@ setTimeout(()=>{
     ketik();
 
 }
-function nextSurprisqe(){
+function showGift(){
 
     document.getElementById("letter").style.display="none";
 
