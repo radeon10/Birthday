@@ -340,6 +340,25 @@ padding:22px;
 .wiggle{
     animation: wiggle .35s ease;
 }
+
+/* ===== Fade Out ===== */
+
+.fadeOut{
+    animation: fadeOut .5s forwards;
+}
+
+@keyframes fadeOut{
+    from{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+    to{
+        opacity:0;
+        transform:translateY(-25px);
+    }
+}
+
 /* ==========================
    Floating Hearts
 ========================== */
