@@ -95,10 +95,20 @@ setTimeout(()=>{
     ketik();
 
 }
+
 function showGift(){
 
+    // Hilangkan bagian I Love You + kepala
     document.getElementById("ending").style.display = "none";
 
+    // Hilangkan surat
+    document.getElementById("letter").style.display = "none";
+
+    // Munculkan pesan hadiah
     document.getElementById("giftMessage").style.display = "block";
 
+    // Scroll ke pesan hadiah
+    document.getElementById("giftMessage").scrollIntoView({
+        behavior: "smooth"
+    });
 }
