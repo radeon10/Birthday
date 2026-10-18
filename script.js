@@ -78,6 +78,12 @@ Happy Birthday, Sayang 🤍
 
                 document.getElementById("ending").style.display = "block";
 
+setTimeout(()=>{
+
+    document.getElementById("capyButton").style.display="block";
+
+},1200);
+
             }, 1000);
 
         }
@@ -87,5 +93,12 @@ Happy Birthday, Sayang 🤍
     document.getElementById("letter").style.display = "block";
 
     ketik();
+
+}
+function nextSurprisqe(){
+
+    document.getElementById("letter").style.display="none";
+
+    document.getElementById("giftMessage").style.display="block";
 
 }
