@@ -184,10 +184,8 @@ padding:22px;
 
 /* Efek mengetik */
 #typing{
-    overflow: hidden;
     white-space: pre-line;
     border-right: 3px solid #b67cff;
-    animation: blink .8s infinite;
 }
 
 @keyframes blink{
