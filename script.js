@@ -97,8 +97,8 @@ setTimeout(()=>{
 }
 function showGift(){
 
-    document.getElementById("letter").style.display="none";
+    document.getElementById("ending").style.display = "none";
 
-    document.getElementById("giftMessage").style.display="block";
+    document.getElementById("giftMessage").style.display = "block";
 
 }
