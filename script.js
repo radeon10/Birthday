@@ -98,6 +98,11 @@ setTimeout(()=>{
 
 function showGift(){
 
+    // Mainkan suara pop
+    const pop = document.getElementById("popSound");
+    pop.currentTime = 0;
+    pop.play();
+
     // Hilangkan bagian I Love You + kepala
     document.getElementById("ending").style.display = "none";
 
@@ -111,4 +116,5 @@ function showGift(){
     document.getElementById("giftMessage").scrollIntoView({
         behavior: "smooth"
     });
+
 }
