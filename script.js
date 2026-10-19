@@ -76,7 +76,7 @@ Happy Birthday, Sayang 🤍
 
     // Munculkan tanda tangan
     setTimeout(() => {
-        document.querySelector(".signature").classList.add("show");
+        document.getElementById("signature").classList.add("show");
     }, 500);
 
     // Setelah tanda tangan muncul, baru tampilkan ending
