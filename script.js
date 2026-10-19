@@ -74,17 +74,21 @@ Happy Birthday, Sayang 🤍
 
         } else {
 
-            setTimeout(() => {
+    // Munculkan tanda tangan
+    setTimeout(() => {
+        document.querySelector(".signature").classList.add("show");
+    }, 500);
 
-                document.getElementById("ending").style.display = "block";
+    // Setelah tanda tangan muncul, baru tampilkan ending
+    setTimeout(() => {
 
-setTimeout(()=>{
+        document.getElementById("ending").style.display = "block";
 
-    document.getElementById("capyButton").style.display="block";
+        setTimeout(() => {
+            document.getElementById("capyButton").style.display = "block";
+        }, 1200);
 
-},1200);
-
-            }, 1000);
+    }, 1500);
 
         }
 
