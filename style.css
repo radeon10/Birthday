@@ -278,6 +278,30 @@ padding:22px;
     animation: tapHint 1.8s ease-in-out infinite;
 }
 
+.signature{
+    margin-top:50px;
+    text-align:right;
+    opacity:.95;
+}
+
+.signature p{
+    margin:0;
+    font-size:15px;
+    color:#aaa;
+    font-style:italic;
+}
+
+.signature h3{
+    margin-top:6px;
+    margin-bottom:0;
+    font-size:26px;
+    font-family:"Brush Script MT", cursive;
+    font-weight:normal;
+    color:#fff;
+    letter-spacing:.5px;
+    text-shadow:0 0 8px rgba(255,255,255,.15);
+}
+
 @keyframes tapHint{
 
     0%,100%{
