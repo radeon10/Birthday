@@ -502,29 +502,4 @@ padding:22px;
     position: absolute;
     width: 40px;
     opacity: .9;
-    animation: flap .8s ease-in-out infinite alternate;
-}
-
-@keyframes flap{
-    from{
-        transform: rotate(-6deg) scale(1);
-    }
-    to{
-        transform: rotate(6deg) scale(1.05);
-    }
-}
-
-.butterfly1{
-    left:8%;
-    top:70%;
-}
-
-.butterfly2{
-    left:45%;
-    top:20%;
-}
-
-.butterfly3{
-    right:10%;
-    top:60%;
 }
