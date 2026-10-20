@@ -40,7 +40,11 @@ function mulaiSurat() {
         setTimeout(() => d.remove(), 5000);
     }
 
-    const p = document.getElementById("typing");
+document
+    .getElementById("butterfly-container")
+    .classList.add("show");
+
+const p = document.getElementById("typing");
 
     const text = `
 Happy Birthday...
