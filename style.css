@@ -500,7 +500,7 @@ padding:22px;
 
 .butterfly{
     position: absolute;
-    width: 60px;
+    width: 40px;
     opacity: .9;
     animation: flap .8s ease-in-out infinite alternate;
 }
