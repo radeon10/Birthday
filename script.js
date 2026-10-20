@@ -44,6 +44,18 @@ document
     .getElementById("butterfly-container")
     .classList.add("show");
 
+    const butterflies=document.querySelectorAll(".butterfly");
+
+butterflies.forEach((b,index)=>{
+
+    setTimeout(()=>{
+
+        flyButterfly(b);
+
+    },Math.random()*4000+index*2000);
+
+});
+
 const p = document.getElementById("typing");
 
     const text = `
@@ -101,6 +113,66 @@ Happy Birthday, Sayang 🤍
     document.getElementById("letter").style.display = "block";
 
     ketik();
+
+}
+
+function flyButterfly(img){
+
+    const startSide = Math.floor(Math.random()*4);
+
+    let startX,startY,endX,endY;
+
+    switch(startSide){
+
+        case 0: // kiri
+            startX=-80;
+            startY=Math.random()*window.innerHeight;
+            endX=window.innerWidth+80;
+            endY=Math.random()*window.innerHeight;
+            break;
+
+        case 1: // kanan
+            startX=window.innerWidth+80;
+            startY=Math.random()*window.innerHeight;
+            endX=-80;
+            endY=Math.random()*window.innerHeight;
+            break;
+
+        case 2: // atas
+            startX=Math.random()*window.innerWidth;
+            startY=-80;
+            endX=Math.random()*window.innerWidth;
+            endY=window.innerHeight+80;
+            break;
+
+        default: // bawah
+            startX=Math.random()*window.innerWidth;
+            startY=window.innerHeight+80;
+            endX=Math.random()*window.innerWidth;
+            endY=-80;
+    }
+
+    img.style.left=startX+"px";
+    img.style.top=startY+"px";
+    img.style.opacity=1;
+
+    img.animate([
+        {
+            transform:`translate(0,0) rotate(0deg)`
+        },
+        {
+            transform:`translate(${endX-startX}px,${endY-startY}px) rotate(${Math.random()*360-180}deg)`
+        }
+    ],{
+        duration:7000+Math.random()*4000,
+        easing:"ease-in-out",
+        fill:"forwards"
+    });
+
+    setTimeout(()=>{
+        img.style.opacity=0;
+        flyButterfly(img);
+    },9000+Math.random()*5000);
 
 }
 
