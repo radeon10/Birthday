@@ -40,41 +40,52 @@ function mulaiSurat() {
         setTimeout(() => d.remove(), 5000);
     }
 
-    document.getElementById("butterfly-container").classList.add("show");
+    // ==========================
+// Butterfly Animation
+// ==========================
 
-    const butterflies = document.querySelectorAll(".butterfly");
+document.getElementById("butterfly-container").classList.add("show");
 
-function randomFly(butterfly) {
+const butterflies = document.querySelectorAll(".butterfly");
 
-    const top = Math.random() * (window.innerHeight - 120);
+function flyButterfly(butterfly) {
 
-    butterfly.style.top = top + "px";
-    butterfly.style.left = "-100px";
+    // posisi awal acak (atas-bawah)
+    butterfly.style.top =
+        Math.random() * (window.innerHeight - 100) + "px";
 
+    // mulai dari luar kiri
+    butterfly.style.left = "-120px";
+
+    // reset animasi
     butterfly.style.animation = "none";
     butterfly.offsetHeight;
 
-    const duration = 10 + Math.random() * 5;
+    // durasi acak
+    const duration = 8 + Math.random() * 5;
 
     butterfly.style.animation =
-        `fly ${duration}s linear forwards, flap .5s ease-in-out infinite alternate`;
+        `fly ${duration}s linear forwards, flap .6s ease-in-out infinite alternate`;
 
     butterfly.onanimationend = () => {
 
         butterfly.style.animation = "none";
 
+        // muncul lagi setelah jeda acak
         setTimeout(() => {
-            randomFly(butterfly);
-        }, Math.random() * 4000 + 1000);
+            flyButterfly(butterfly);
+        }, Math.random() * 5000 + 1000);
 
     };
+
 }
 
-butterflies.forEach((b) => {
+// Mulai satu-satu (tidak bersamaan)
+butterflies.forEach((butterfly) => {
 
     setTimeout(() => {
-        randomFly(b);
-    }, Math.random() * 4000);
+        flyButterfly(butterfly);
+    }, Math.random() * 6000);
 
 });
 
