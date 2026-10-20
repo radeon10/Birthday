@@ -506,9 +506,6 @@ padding:22px;
     top:-100px;
     pointer-events:none;
 
-    animation:
-        fly 12s linear infinite,
-        flap .5s ease-in-out infinite alternate;
 }
 
 @keyframes fly {
@@ -548,16 +545,4 @@ padding:22px;
     to{
         transform:scale(.95) rotate(4deg);
     }
-}
-
-.butterfly1{
-    animation-delay:0s;
-}
-
-.butterfly2{
-    animation-delay:2s;
-}
-
-.butterfly3{
-    animation-delay:4s;
 }
