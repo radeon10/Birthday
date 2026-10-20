@@ -480,3 +480,36 @@ padding:22px;
     }
 
 }
+
+/* ===========================
+   Butterfly Animation
+=========================== */
+
+#butterfly-container{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 8;
+    display: none;
+}
+
+#butterfly-container.show{
+    display: block;
+}
+
+.butterfly{
+    position: absolute;
+    width: 60px;
+    opacity: .9;
+    animation: flap .8s ease-in-out infinite alternate;
+}
+
+@keyframes flap{
+    from{
+        transform: rotate(-6deg) scale(1);
+    }
+    to{
+        transform: rotate(6deg) scale(1.05);
+    }
+}
