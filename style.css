@@ -305,9 +305,9 @@ padding:22px;
     font-size:26px;
     font-family:"Brush Script MT", cursive;
     font-weight:normal;
-    color:#fff;
+    color:#8b5cf6;
     letter-spacing:.5px;
-    text-shadow:0 0 8px rgba(255,255,255,.15);
+    text-shadow:0 2px 12px rgba(139,92,246,.25);
 }
 
 @keyframes tapHint{
