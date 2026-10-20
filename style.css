@@ -513,3 +513,18 @@ padding:22px;
         transform: rotate(6deg) scale(1.05);
     }
 }
+
+.butterfly1{
+    left:8%;
+    top:70%;
+}
+
+.butterfly2{
+    left:45%;
+    top:20%;
+}
+
+.butterfly3{
+    right:10%;
+    top:60%;
+}
