@@ -40,21 +40,33 @@ function mulaiSurat() {
         setTimeout(() => d.remove(), 5000);
     }
 
-document
-    .getElementById("butterfly-container")
-    .classList.add("show");
+    const butterflies = document.querySelectorAll(".butterfly");
+const container = document.getElementById("butterfly-container");
 
-    const butterflies=document.querySelectorAll(".butterfly");
+container.classList.add("show");
 
-butterflies.forEach((b,index)=>{
+function flyButterfly(butterfly) {
+    const startY = Math.random() * window.innerHeight;
+    const delay = Math.random() * 4000;
 
-    setTimeout(()=>{
+    setTimeout(() => {
+        butterfly.style.top = startY + "px";
+        butterfly.style.animation =
+            "fly 12s linear forwards, flap .5s ease-in-out infinite alternate";
 
-        flyButterfly(b);
+        butterfly.addEventListener("animationend", () => {
+            butterfly.style.animation = "none";
 
-    },Math.random()*4000+index*2000);
+            setTimeout(() => {
+                flyButterfly(butterfly);
+            }, Math.random() * 5000 + 1000);
 
-});
+        }, { once: true });
+
+    }, delay);
+}
+
+butterflies.forEach(flyButterfly);
 
 const p = document.getElementById("typing");
 
