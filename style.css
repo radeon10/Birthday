@@ -499,13 +499,14 @@ padding:22px;
 }
 
 .butterfly{
-    position:absolute;
-    width:40px;
-    left:-120px;
-    top:-120px;
-    opacity:0;
-    pointer-events:none;
-    will-change:transform,left,top;
+    position: absolute;
+    width: 40px;
+    left: -120px;
+    top: -120px;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform, left, top;
+    transform-origin: center center;
 }
 
 @keyframes fly {
