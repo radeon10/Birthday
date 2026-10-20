@@ -509,6 +509,13 @@ padding:22px;
     transform-origin: center center;
 }
 
+.butterfly img{
+    width: 100%;
+    display: block;
+    transform-origin: center center;
+    animation: flap .35s ease-in-out infinite alternate;
+}
+
 @keyframes fly {
 
     0%{
