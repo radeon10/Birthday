@@ -40,33 +40,43 @@ function mulaiSurat() {
         setTimeout(() => d.remove(), 5000);
     }
 
+    document.getElementById("butterfly-container").classList.add("show");
+
     const butterflies = document.querySelectorAll(".butterfly");
-const container = document.getElementById("butterfly-container");
 
-container.classList.add("show");
+function randomFly(butterfly) {
 
-function flyButterfly(butterfly) {
-    const startY = Math.random() * window.innerHeight;
-    const delay = Math.random() * 4000;
+    const top = Math.random() * (window.innerHeight - 120);
 
-    setTimeout(() => {
-        butterfly.style.top = startY + "px";
-        butterfly.style.animation =
-            "fly 12s linear forwards, flap .5s ease-in-out infinite alternate";
+    butterfly.style.top = top + "px";
+    butterfly.style.left = "-100px";
 
-        butterfly.addEventListener("animationend", () => {
-            butterfly.style.animation = "none";
+    butterfly.style.animation = "none";
+    butterfly.offsetHeight;
 
-            setTimeout(() => {
-                flyButterfly(butterfly);
-            }, Math.random() * 5000 + 1000);
+    const duration = 10 + Math.random() * 5;
 
-        }, { once: true });
+    butterfly.style.animation =
+        `fly ${duration}s linear forwards, flap .5s ease-in-out infinite alternate`;
 
-    }, delay);
+    butterfly.onanimationend = () => {
+
+        butterfly.style.animation = "none";
+
+        setTimeout(() => {
+            randomFly(butterfly);
+        }, Math.random() * 4000 + 1000);
+
+    };
 }
 
-butterflies.forEach(flyButterfly);
+butterflies.forEach((b) => {
+
+    setTimeout(() => {
+        randomFly(b);
+    }, Math.random() * 4000);
+
+});
 
 const p = document.getElementById("typing");
 
