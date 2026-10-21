@@ -108,6 +108,7 @@ butterflies.forEach((butterfly) => {
 
 const typed = document.getElementById("typed");
 const cursor = document.getElementById("cursor");
+const typeSound = document.getElementById("typeSound");
 
     const text = `
 Happy Birthday...
@@ -135,9 +136,19 @@ Happy Birthday, Sayang 🤍
         if (i < text.length) {
 
             typed.textContent += text.charAt(i);
-            i++;
 
-            setTimeout(ketik, 25);
+const ch = text.charAt(i);
+
+// Bunyi hanya untuk karakter, bukan spasi atau enter
+if (ch !== " " && ch !== "\n") {
+    typeSound.currentTime = 0;
+    typeSound.volume = 0.22;
+    typeSound.play().catch(() => {});
+}
+
+i++;
+
+setTimeout(ketik, 25);
 
         } else {
 
