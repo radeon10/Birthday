@@ -214,6 +214,7 @@ const angka = ["5...", "4...", "3...", "2...", "1..."];
 
 setTimeout(() => {
 
+    countdown.style.display = "block";
     countdown.innerHTML = angka[0];
     let n = 0;
 
