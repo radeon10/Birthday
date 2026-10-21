@@ -187,7 +187,6 @@ padding:22px;
 #typing{
     white-space: pre-line;
     border-right: 3px solid #b67cff;
-    animation: blink .8s step-end infinite;
 }
 
 @keyframes blink{
