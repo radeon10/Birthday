@@ -233,7 +233,7 @@ setTimeout(() => {
 
     }, 1000);
 
-}, 8000);
+}, 13000);
 
             // Scroll
             gift.scrollIntoView({
