@@ -185,11 +185,9 @@ padding:22px;
 
 /* Efek mengetik */
 #typing{
-    display:inline-block;
+    display:inline;
     white-space:pre-wrap;
-    width:auto;
-    max-width:none;
-    border-right:3px solid #b67cff;
+    border-right:2px solid #b67cff;
     animation:blink .8s step-end infinite;
 }
 
