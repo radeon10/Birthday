@@ -140,6 +140,9 @@ Happy Birthday, Sayang 🤍
 
         } else {
 
+            p.style.borderRight = "none";
+p.style.animation = "none";
+
     // Munculkan tanda tangan
     setTimeout(() => {
         document.getElementById("signature").classList.add("show");
