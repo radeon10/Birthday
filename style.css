@@ -185,12 +185,10 @@ padding:22px;
 
 /* Efek mengetik */
 #typing{
-    white-space: pre-line;
-    display: inline-block;
-    width: fit-content;
-    max-width: 100%;
-    border-right: 3px solid #b67cff;
-    animation: blink .8s step-end infinite;
+    display:inline;
+    white-space:pre-line;
+    border-right:3px solid #b67cff;
+    animation:blink .8s step-end infinite;
 }
 
 @keyframes blink{
