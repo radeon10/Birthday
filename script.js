@@ -65,7 +65,7 @@ function flyButterfly(butterfly) {
     const duration = 8 + Math.random() * 5;
 
     butterfly.style.animation =
-        `fly ${duration}s linear forwards, flap .6s ease-in-out infinite alternate`;
+`fly ${duration}s linear forwards`;
 
     butterfly.onanimationend = () => {
 
