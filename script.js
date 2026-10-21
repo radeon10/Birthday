@@ -135,15 +135,12 @@ Happy Birthday, Sayang 🤍
 
         if (i < text.length) {
 
-            typed.textContent += text.charAt(i);
-
 const ch = text.charAt(i);
 
 typed.textContent += ch;
 
-// Putar ASMR sekali saat mulai mengetik
-if (i === 0) {
-    typeSound.volume = 0.22;
+if (ch !== " " && ch !== "\n") {
+    typeSound.currentTime = 0;
     typeSound.play().catch(() => {});
 }
 
