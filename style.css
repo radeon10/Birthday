@@ -185,17 +185,26 @@ padding:22px;
 
 /* Efek mengetik */
 #typing{
-    display:inline;
-    white-space:pre-wrap;
-    border-right:2px solid #b67cff;
-    animation:blink .8s step-end infinite;
+    white-space: pre-wrap;
+}
+
+#typed{
+    white-space: pre-wrap;
+}
+
+#cursor{
+    display: inline;
+    color: #b67cff;
+    font-weight: bold;
+    animation: blink .8s step-end infinite;
 }
 
 @keyframes blink{
     50%{
-        border-color: transparent;
+        opacity: 0;
     }
 }
+
 .card{
     transition: all .6s ease;
 }
