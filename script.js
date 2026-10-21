@@ -11,8 +11,25 @@ function start(){
         const bgm = document.getElementById("bgm");
 
 if (bgm) {
-    bgm.volume = 0.3;
+
+    bgm.volume = 0;
     bgm.play().catch(() => {});
+
+    let volume = 0;
+
+    const fade = setInterval(() => {
+
+        volume += 0.02;
+
+        if (volume >= 0.25) {
+            volume = 0.25;
+            clearInterval(fade);
+        }
+
+        bgm.volume = volume;
+
+    }, 120);
+
 }
 
 card.style.display = "none";
