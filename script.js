@@ -216,10 +216,10 @@ setTimeout(() => {
 
     countdown.style.display = "block";
     countdown.innerHTML = angka[0];
+
     let n = 0;
 
     const timer = setInterval(() => {
-
         n++;
 
         if (n < angka.length) {
@@ -233,7 +233,7 @@ setTimeout(() => {
 
     }, 1000);
 
-}, 5000);
+}, 8000);
 
             // Scroll
             gift.scrollIntoView({
