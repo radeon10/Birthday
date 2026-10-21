@@ -139,18 +139,21 @@ Happy Birthday, Sayang 🤍
 
 const ch = text.charAt(i);
 
-// Bunyi hanya untuk karakter, bukan spasi atau enter
-if (ch !== " " && ch !== "\n") {
-    typeSound.currentTime = 0;
+typed.textContent += ch;
+
+// Putar ASMR sekali saat mulai mengetik
+if (i === 0) {
     typeSound.volume = 0.22;
     typeSound.play().catch(() => {});
 }
 
 i++;
-
 setTimeout(ketik, 25);
 
         } else {
+
+            typeSound.pause();
+typeSound.currentTime = 0;
 
             cursor.style.display = "none";
 
