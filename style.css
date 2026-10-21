@@ -499,21 +499,20 @@ padding:22px;
 }
 
 .butterfly{
-    position: absolute;
-    width: 40px;
-    left: -120px;
-    top: -120px;
-    opacity: 0;
-    pointer-events: none;
-    will-change: transform, left, top;
-    transform-origin: center center;
+    position:absolute;
+    width:40px;
+    left:-120px;
+    top:-120px;
+    opacity:0;
+    pointer-events:none;
+    will-change:transform,left,top;
 }
 
 .butterfly img{
-    width: 100%;
-    display: block;
-    transform-origin: center center;
-    animation: flap .35s ease-in-out infinite alternate;
+    width:100%;
+    display:block;
+    transform-origin:center center;
+    animation:flap .45s ease-in-out infinite alternate;
 }
 
 @keyframes fly {
@@ -551,19 +550,18 @@ padding:22px;
 
 }
 
-@keyframes flap {
-    0% {
-        transform: scale(1) rotate(-8deg);
-        filter: brightness(100%);
+@keyframes flap{
+
+    0%{
+        transform:rotate(-12deg) scale(1);
     }
 
-    50% {
-        transform: scale(0.92) rotate(8deg);
-        filter: brightness(120%);
+    50%{
+        transform:rotate(12deg) scale(.88);
     }
 
-    100% {
-        transform: scale(1) rotate(-8deg);
-        filter: brightness(100%);
+    100%{
+        transform:rotate(-12deg) scale(1);
     }
+
 }
