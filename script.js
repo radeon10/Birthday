@@ -133,17 +133,15 @@ Happy Birthday, Sayang 🤍
 
     function ketik() {
 
+        if (i === 0) {
+    typeSound.loop = true;
+    typeSound.volume = 0.22; // sesuaikan kalau terlalu keras
+    typeSound.play().catch(() => {});
+        }
+
         if (i < text.length) {
 
-const ch = text.charAt(i);
-
-typed.textContent += ch;
-
-if (ch !== " " && ch !== "\n") {
-    typeSound.currentTime = 0;
-    typeSound.play().catch(() => {});
-}
-
+typed.textContent += text.charAt(i);
 i++;
 setTimeout(ketik, 25);
 
