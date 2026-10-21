@@ -208,6 +208,27 @@ function showGift(){
             // Tampilkan hadiah
             const gift = document.getElementById("giftMessage");
             gift.style.display = "block";
+            const countdown = document.getElementById("countdown");
+
+const angka = ["5...", "4...", "3...", "2...", "1..."];
+
+let n = 0;
+
+countdown.innerHTML = angka[n];
+
+const timer = setInterval(() => {
+    n++;
+
+    if (n < angka.length) {
+        countdown.innerHTML = angka[n];
+    } else {
+        clearInterval(timer);
+
+countdown.style.display = "none";
+document.getElementById("giftText").style.display = "block";
+    }
+
+}, 1000);
 
             // Scroll
             gift.scrollIntoView({
