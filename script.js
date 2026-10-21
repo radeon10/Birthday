@@ -212,23 +212,27 @@ function showGift(){
 
 const angka = ["5...", "4...", "3...", "2...", "1..."];
 
-let n = 0;
+setTimeout(() => {
 
-countdown.innerHTML = angka[n];
+    countdown.innerHTML = angka[0];
+    let n = 0;
 
-const timer = setInterval(() => {
-    n++;
+    const timer = setInterval(() => {
 
-    if (n < angka.length) {
-        countdown.innerHTML = angka[n];
-    } else {
-        clearInterval(timer);
+        n++;
 
-countdown.style.display = "none";
-document.getElementById("giftText").style.display = "block";
-    }
+        if (n < angka.length) {
+            countdown.innerHTML = angka[n];
+        } else {
+            clearInterval(timer);
 
-}, 1000);
+            countdown.style.display = "none";
+            document.getElementById("giftText").style.display = "block";
+        }
+
+    }, 1000);
+
+}, 5000);
 
             // Scroll
             gift.scrollIntoView({
