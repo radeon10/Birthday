@@ -106,7 +106,8 @@ butterflies.forEach((butterfly) => {
 
 });
 
-const p = document.getElementById("typing");
+const typed = document.getElementById("typed");
+const cursor = document.getElementById("cursor");
 
     const text = `
 Happy Birthday...
@@ -126,22 +127,21 @@ Karna ngeliat kamu bahagia, itu juga bikin aku bahagia ☺
 Happy Birthday, Sayang 🤍
 `;
 
-    p.textContent = "";
+    typed.textContent = "";
     let i = 0;
 
     function ketik() {
 
         if (i < text.length) {
 
-            p.textContent += text.charAt(i);
+            typed.textContent += text.charAt(i);
             i++;
 
             setTimeout(ketik, 25);
 
         } else {
 
-            p.style.borderRight = "none";
-p.style.animation = "none";
+            cursor.style.display = "none";
 
     // Munculkan tanda tangan
     setTimeout(() => {
