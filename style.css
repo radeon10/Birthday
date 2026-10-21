@@ -503,7 +503,7 @@ padding:22px;
     width:40px;
     left:-120px;
     top:-120px;
-    opacity:0;
+    opacity:1;
     pointer-events:none;
     will-change:transform,left,top;
 }
